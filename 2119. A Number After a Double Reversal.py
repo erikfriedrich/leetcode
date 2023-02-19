@@ -5,6 +5,8 @@
 # since 0 are not retained -> the only case in which reversed2 doesn't equal num is when num divisible by ten
 # 0 itself being the exception; if num == 0, true has to be returned
 
+# I also tried it the other way aroung (return False if), but it was slower
+
 class Solution:
     def isSameAfterReversals(self, num: int) -> bool:
         return True if num % 10 != 0 or num == 0 else False
