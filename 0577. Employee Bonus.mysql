@@ -1,0 +1,18 @@
+# +-------------+---------+
+#| Column Name | Type    |
+#+-------------+---------+
+#| empId       | int     |
+#| name        | varchar |
+#| supervisor  | int     |
+#| salary      | int     |
+#+-------------+---------+
+#empId is the primary key column for this table.
+#Each row of this table indicates the name and the ID of an employee in addition to their salary and the id of their manager.
+
+# Write your MySQL query statement below
+
+SELECT Employee.name, Bonus.bonus
+From Employee
+LEFt JOIN Bonus
+ON Employee.empID = Bonus.empId
+WHERE COALESCE(bonus, 0) < 1000;
